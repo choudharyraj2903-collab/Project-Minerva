@@ -27,8 +27,8 @@ article_tokens=word_tokenize(article_text)
 
 model = SentenceTransformer("sentence-transformers/all-MiniLM-L6-v2")
 
-title_embedding=model.encode(title)
-article_embedding=model.encode(article_text)
+title_embedding=model.encode(title_tokens)
+article_embedding=model.encode(article_tokens)
 
 print(title_embedding.shape)
 print(article_embedding.shape)
